@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzler Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 300px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rizzler Game</h1>
+    <p>Can you "Ohio" the "Skibidi" and drink the Grimace Shake to receive a Pomni Jax Skibidi Toile from Baby Gronk?</p>
+    <button onclick="rizzler()">Rizzler</button>
+    <p id="result"></p>
+    <img id="grimaceImg" src="https://i.imgur.com/74tCMXx.png" alt="Grimace Shake" style="display: none;">
+    <img id="gronkImg" src="https://i.imgur.com/3AQLUMS.png" alt="Baby Gronk" style="display: none;">
+    <img id="livveImg" src="https://i.imgur.com/5Jir8y5.png" alt="Livve Dunne" style="display: none;">
+    <img id="sigmaImg" src="https://i.imgur.com/fKdG8n8.png" alt="Sigma Male" style="display: none;">
+    <img id="coinImg" src="https://i.imgur.com/YCcvpNO.png" alt="Coin" style="display: none;">
+    <img id="amogusImg" src="https://i.imgur.com/7KJr4PH.png" alt="Amogus" style="display: none;">
+    <img id="fortniteImg" src="https://i.imgur.com/kBfzJOk.png" alt="Fortnite CSGO Rizzler" style="display: none;">
+
+    <script>
+        function rizzler() {
+            const randomNumber = Math.random();
+            let result = "";
+
+            if (randomNumber < 0.5) {
+                result = "You successfully Ohioed the Skibidi!";
+                document.getElementById("grimaceImg").style.display = "inline";
+                setTimeout(function() {
+                    document.getElementById("gronkImg").style.display = "inline";
+                    document.getElementById("result").textContent = "Baby Gronk gives you a Pomni Jax Skibidi Toile!";
+                    setTimeout(function() {
+                        document.getElementById("result").textContent = "You vent like the imposter!";
+                        setTimeout(function() {
+                            document.getElementById("grimaceImg").style.display = "none";
+                            document.getElementById("livveImg").style.display = "inline";
+                            document.getElementById("result").textContent = "Livve Dunne steals your Grimace Shake!";
+                            setTimeout(function() {
+                                document.getElementById("sigmaImg").style.display = "inline";
+                                document.getElementById("coinImg").style.display = "inline";
+                                document.getElementById("result").textContent = "The Sigma Male drops money money green green moneys all I need need coin!";
+                                setTimeout(function() {
+                                    document.getElementById("amogusImg").style.display = "inline";
+                                    document.getElementById("coinImg").style.display = "none";
+                                    document.getElementById("result").textContent = "Amogus steals your money money green green moneys all I need need coin!";
+                                    setTimeout(function() {
+                                        document.getElementById("amogusImg").style.display = "none";
+                                        document.getElementById("fortniteImg").style.display = "inline";
+                                        document.getElementById("result").textContent = "Amogus transforms into Fortnite CSGO Rizzler! You have 5 seconds to live, like and subscribe or Lankybox will fry >:(";
+                                        setTimeout(function() {
+                                            document.getElementById("result").textContent = "Fortnite CSGO Rizzler gives you brain rot disease! You die and win the game!";
+                                        }, 5000); // Display brain rot disease message after 5 seconds
+                                    }, 2000); // Show Fortnite CSGO Rizzler after 2 seconds
+                                }, 2000); // Show Amogus after 2 seconds
+                            }, 2000); // Show Sigma Male after 2 seconds
+                        }, 2000); // Show Livve Dunne after 2 seconds
+                    }, 2000); // Show venting message after 2 seconds
+                }, 2000); // Show Baby Gronk after 2 seconds
+            } else {
+                result = "Oh no! The Skibidi evaded your Ohio!";
+                document.getElementById("grimaceImg").style.display = "none";
+                document.getElementById("gronkImg").style.display = "none";
+                document.getElementById("livveImg").style.display = "none";
+                document.getElementById("sigmaImg").style.display = "none";
+                document.getElementById("coinImg").style.display = "none";
+                document.getElementById("amogusImg").style.display = "none";
+                document.getElementById("fortniteImg").style.display = "none";
+            }
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
